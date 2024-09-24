@@ -1,6 +1,6 @@
 ckpt=/home/haven/mydisk/mira-models/768-v1-5s.pt
 
-export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:32
+export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:6144
 
 HOST_GPU_NUM=1
 HOST_NUM=1
