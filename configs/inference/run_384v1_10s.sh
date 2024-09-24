@@ -14,7 +14,7 @@ mira/scripts/evaluation/ddp_wrapper.py \
 --module 'inference' \
 --seed 2000 \
 --ckpt_path  $ckpt \
---base "./configs/Mira/config_384v1_10s_mira.yaml" \
+--base "./configs/Mira/config_384_mira.yaml" \
 --savedir ./Saved_Text2Video-Test/test-mira-384 \
 --n_samples 1 \
 --bs 1 \
