@@ -1,4 +1,6 @@
+
 ckpt=/home/haven/mydisk/mira-models/768-v1-5s.pt
+
 
 
 HOST_GPU_NUM=1

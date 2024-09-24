@@ -1,5 +1,5 @@
 
-ckpt=/home/haven/mydisk/mira-models/384-v1-10s.pt
+ckpt=/home/haven/mydisk/mira-models/128-v0.pt
 
 
 
@@ -14,12 +14,12 @@ mira/scripts/evaluation/ddp_wrapper.py \
 --module 'inference' \
 --seed 2000 \
 --ckpt_path  $ckpt \
---base "./configs/Mira/config_384_mira.yaml" \
---savedir ./Saved_Text2Video-Test/test-mira-384 \
+--base "./configs/Mira/config_128_mira.yaml" \
+--savedir ./Saved_Text2Video-Test/test-mira-128 \
 --n_samples 1 \
 --bs 1 \
---height 240 \
---width 384 \
+--height 80 \
+--width 128 \
 --unconditional_guidance_scale 12 \
 --ddim_steps  50 --ddim_eta 1.0 \
 --prompt_file ./prompts/test_prompt.txt
