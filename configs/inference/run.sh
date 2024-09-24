@@ -1,7 +1,7 @@
 ckpt=/home/haven/mydisk/mira-models/768-v1-5s.pt
 
 
-HOST_GPU_NUM=8
+HOST_GPU_NUM=1
 HOST_NUM=1
 CHIEF_IP=127.0.0.1
 INDEX=0
