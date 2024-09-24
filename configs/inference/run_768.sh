@@ -1,18 +1,11 @@
 ckpt=/home/haven/mydisk/mira-models/768-v1-5s.pt
 
-export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:128
+export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:32
 
 HOST_GPU_NUM=1
 HOST_NUM=1
 CHIEF_IP=127.0.0.1
 INDEX=0
-
-export CUDA_VISIBLE_DEVICES=0
-
-python -c "
-import torch
-torch.cuda.set_per_process_memory_fraction(0.8, 0)
-"
 
 torchrun --nproc_per_node=$HOST_GPU_NUM --nnodes=$HOST_NUM --master_addr=$CHIEF_IP --master_port=12594 --node_rank=$INDEX \
 mira/scripts/evaluation/ddp_wrapper.py \
