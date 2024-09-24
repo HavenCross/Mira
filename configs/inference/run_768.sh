@@ -8,6 +8,12 @@ HOST_NUM=1
 CHIEF_IP=127.0.0.1
 INDEX=0
 
+export CUDA_VISIBLE_DEVICES=0
+
+python -c "
+import torch
+torch.cuda.set_per_process_memory_fraction(0.9, 0)  # 将显存限制为90%的24GB,约21.6GB
+"
 
 torchrun --nproc_per_node=$HOST_GPU_NUM --nnodes=$HOST_NUM --master_addr=$CHIEF_IP --master_port=12594 --node_rank=$INDEX \
 mira/scripts/evaluation/ddp_wrapper.py \
