@@ -1,5 +1,5 @@
 
-ckpt=/home/haven/mydisk/mira-models/384-v0.pt
+ckpt=/home/netzone/mydir/mira-models/384-v0.pt
 
 
 
