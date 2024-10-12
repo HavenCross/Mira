@@ -1,5 +1,5 @@
 
-ckpt=/home/netzone/mydir/mira-models/128-v0.pt
+ckpt=/home/netzone22/mira-models/128-v0.pt
 
 
 
